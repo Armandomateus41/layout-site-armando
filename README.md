@@ -25,5 +25,5 @@ Este projeto tem como objetivo criar um site com layout responsivo e funcionalid
 ## Configuração das Fontes
 
 Estamos utilizando as fontes **Poppins** e **Ubuntu** do Google Fonts. O link das fontes está incluído no arquivo HTML:
-```html
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">

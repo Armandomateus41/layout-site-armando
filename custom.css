@@ -1,23 +1,80 @@
-/* ester icone e para atual a cor pelo site todo ou melhor em tpodas as paginas */
+/* Este arquivo define estilos globais e customizações de fontes e navegação */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* Importação das fontes Google Fonts com os pesos necessários */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
-*{
+/* Reset global */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fonte padrão */
+    text-decoration: none; /* Remove sublinhado de links */
 }
 
-
+/* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0c0f16;
-    color: #ffffff;
+    background-color: #0c0f16; /* Cor de fundo escuro */
+    color: #ffffff; /* Texto padrão branco */
+    font-size: 16px; /* Tamanho de fonte padrão */
+    line-height: 1.6; /* Altura das linhas */
 }
 
-.text-teste{
-  color: #f6f6f6;
-  text-align: center;
-  font-family: 'ubuntu', 'sans-serif';
+/* Classe de teste de texto */
+.text-teste {
+    color: #f6f6f6; /* Cor clara para destaque */
+    text-align: center; /* Centraliza texto */
+    font-family: 'Ubuntu', sans-serif; /* Define a fonte Ubuntu */
+}
+
+/* Container com largura máxima */
+.max-width {
+    max-width: 1300px; /* Define limite de largura */
+    padding: 0 10px;
+    margin:  auto; /* Centraliza horizontalmente */
+}
+
+/* Menu personalizado */
+.navbar .logo a{
+    color: #547ec7; /* Cor do texto do logotipo */
+    font-size: 35px; /* Tamanho da fonte do logotipo */
+    font-weight: 500; /* Peso da fonte */
+}
+
+/* Barra de navegação */
+.navbar {
+    position: fixed; /* Fixado no topo */
+    width: 100%; /* Largura total da página */
+    z-index: 999; /* Camada superior */
+    padding: 20px 0; 
+    font-family: 'Ubuntu', sans-serif; /* Define a fonte Ubuntu */
+    background-color: #121721; /* Cor de fundo do header */ 
+
+    border-bottom: solid #1b202a 1px;  /* borda divisivor */
+    
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*espaço entre elementos*/
+}
+
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a{
+  color: #ffffff; /* Cor do texto dos links */
+  padding: 10px 20px; /* espaço entre links */
+  transition: color 0.3s ease; /* efeito de transição */
+  font-size 18px;
+  font-weight: 500; /* Peso da fonte */
+}
+.menu-btn{
+ 
+  color: #ffffff; /* Cor do texto do botão */
+font-size: 23px;
+  cursor: pointer; /* muda cursor para ponta de clique */
 }

@@ -386,17 +386,162 @@ border-radius: 6px;
 }
 
 footer{
-    background: #0c0f16;
+    background: #01131d;
     padding: 25px 23px;
     color: #fff;
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
 footer span a{
-    color: #547ec7;
+    color: #87cefa;
 }
 footer span a:hover{
     color: #fff;
 }
 
+/* Seção de Contato */
+.contact {
+    background-color: #121721;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+}
 
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #547ec7;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Coluna da Esquerda */
+.contact .column.left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact .column.left p {
+    color: #ffffff80;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact .icons .row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact .icons .row i {
+    font-size: 1.5rem;
+    color: #547ec7;
+}
+
+.contact .icons .info .heade {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.contact .icons .info .sub-title {
+    font-size: 0.9rem;
+    color: #ffffff80;
+}
+
+/* Coluna da Direita */
+.contact .column.right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact .column.right .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #547ec7;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alteração do fundo do campo */
+form .field input,
+form .field textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #1b202a;
+    border-radius: 5px;
+    background-color: #1c2430; /* Fundo azul escuro */
+    color: #547ec7; /* Texto azul claro */
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form .field input:focus,
+form .field textarea:focus {
+    border-color: #547ec7; /* Azul claro */
+    background-color: #121721; /* Fundo escurece levemente */
+    color: #fff; /* Texto branco */
+}
+
+form .field textarea {
+    resize: none;
+}
+
+form .button {
+    text-align: right;
+}
+
+form .button button {
+    background: #547ec7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form .button button:hover {
+    background: #198289;
+}
+
+/* Responsividade */
+@media (max-width: 947px) {
+    .contact .contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 690px) {
+    .contact .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .column.left,
+    .contact .column.right {
+        width: 100%;
+    }
+}

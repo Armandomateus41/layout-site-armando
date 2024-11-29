@@ -1,30 +1,152 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/custom.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" >
-        <title>Armando - Layout Site Contato</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contato.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Armando - Layout Site Contato</title>
+  </head>
 
-    <body>
-        <nav class="navbar">
-            <div class="max-width">
-                <div class="logo"><a href="index.html">Armando</a></div>
-                <ul class="menu">
-                    <li><a href="index.html" class="menu-btn">Home</a></li>
-                    <li><a href="sobre-empresa.html" class="menu-btn">Sobre Empresa</a></li>
-                    <li><a href="contato.html" class="menu-btn">Contato</a></li>
-                </ul>
-                <div class="menu-btn">
-                    <i class="fas fa-bars"></i>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="max-width">
+        <div class="logo"><a href="index.html">Armando</a></div>
+        <ul class="menu">
+          <li><a href="index.html" class="menu-btn">Home</a></li>
+          <li><a href="sobre-empresa.html" class="menu-btn">Sobre Empresa</a></li>
+          <li><a href="contato.html" class="menu-btn">Contato</a></li>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <h1>Contato</h1>
+      <section class="contact">
+        <div class="max-width">
+          <h2>Contato</h2>
+          <div class="contact-content">
+            <!-- Informações de Contato -->
+            <div class="column left">
+              <p>
+                Sed laoreet cursus commodo. Quisque pharetra nisl vitae diam
+                egestas lacinia. Integer at arcu ac turpis blandit ullamcorper
+                at vitae diam. Donec quam est, aliquam non nisl non, feugiat
+                suscipit eros. Pellentesque condimentum est quam, auctor
+                faucibus velit euismod eget. Nam a diam sed metus molestie
+                tincidunt. Quisque et aliquet risus. Sed et sem quis massa
+                sagittis feugiat at sed risus. Sed semper tortor elit.
+              </p>
+              <div class="icons">
+                <div class="row">
+                  <i class="fas fa-user"></i>
+                  <div class="info">
+                    <div class="heade">Empresa</div>
+                    <div class="sub-title">Armando</div>
+                  </div>
                 </div>
+                <div class="row">
+                  <i class="fas fa-map-marked-alt"></i>
+                  <div class="info">
+                    <div class="heade">Endereço</div>
+                    <div class="sub-title">Avenida Belenzinho</div>
+                  </div>
+                </div>
+                <div class="row">
+                  <i class="fas fa-envelope"></i>
+                  <div class="info">
+                    <div class="heade">Email</div>
+                    <div class="sub-title">contato@armandomateus.com</div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </nav>
-        <h1>Contato</h1>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="js/custom.js"></script>
-    </body>
+
+            <!-- Formulário de Contato -->
+            <div class="column right">
+              <div class="text">Mensagem de Contato</div>
+              <form>
+                <div class="fields">
+                  <!-- Nome -->
+                  <div class="field">
+                    <label for="name">Nome</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Digite o nome"
+                      required
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Digite o seu e-mail"
+                      required
+                    />
+                  </div>
+
+                  <!-- Assunto -->
+                  <div class="field">
+                    <label for="subject">Assunto</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      placeholder="Escreva o assunto"
+                      required
+                    />
+                  </div>
+
+                  <!-- Mensagem -->
+                  <div class="field textarea">
+                    <label for="message">Mensagem</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Escreva sua mensagem"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <!-- Botão de Enviar -->
+                  <div class="button">
+                    <button type="submit">Enviar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="max-width">
+        <p>
+          Copyright &copy; 2024 Armando. Todos os direitos reservados. |
+          Design by
+          <a href="http://armandomateus.com">Armando Mateus</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
 </html>

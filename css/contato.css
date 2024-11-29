@@ -1,0 +1,277 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html, body {
+    height: 100%;
+    background-color: #0c0f16;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Expande para ocupar todo o espaço entre o cabeçalho e o rodapé */
+}
+
+/* Utilitário de largura máxima */
+.max-width {
+    max-width: 1300px;
+    padding: 0 10px;
+    margin: auto;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    background-color: #121721;
+    border-bottom: solid #1b202a 1px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #547ec7;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 25px;
+}
+
+/* Botão do menu para dispositivos móveis */
+.menu-btn {
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos responsivos para a navbar */
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar .menu {
+        background-color: #121721;
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 13px 0;
+        font-size: 25px;
+    }
+
+    .max-width {
+        max-width: 930px;
+    }
+}
+
+/* Seção de Contato */
+.contact {
+    background-color: #121721;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #547ec7;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contact .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Coluna da Esquerda */
+.contact .column.left {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact .column.left p {
+    color: #ffffff80;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact .icons .row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contact .icons .row i {
+    font-size: 1.5rem;
+    color: #547ec7;
+}
+
+.contact .icons .info .heade {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.contact .icons .info .sub-title {
+    font-size: 0.9rem;
+    color: #ffffff80;
+}
+
+/* Coluna da Direita */
+.contact .column.right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact .column.right .text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #547ec7;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form .fields {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alteração do fundo do campo */
+form .field input,
+form .field textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #1b202a;
+    border-radius: 5px;
+    background-color: #1c2430; /* Fundo azul escuro */
+    color: #547ec7; /* Texto azul claro */
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+form .field input:focus,
+form .field textarea:focus {
+    border-color: #547ec7; /* Azul claro */
+    background-color: #121721; /* Fundo escurece levemente */
+    color: #fff; /* Texto branco */
+}
+
+form .field textarea {
+    resize: none;
+}
+
+form .button {
+    text-align: right;
+}
+
+form .button button {
+    background: #547ec7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form .button button:hover {
+    background: #198289;
+}
+
+/* Rodapé */
+footer {
+    background: #01131d;
+    padding: 25px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+}
+
+footer a {
+    color: #87cefa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 947px) {
+    .contact .contact-content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 690px) {
+    .contact .contact-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .column.left,
+    .contact .column.right {
+        width: 100%;
+    }
+}

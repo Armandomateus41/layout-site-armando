@@ -1,56 +1,55 @@
+/* Importação de fontes */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-*{
+/* Estilos globais */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
 
-body{
+body {
     background-color: #0c0f16;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.text-test{
-    color: #f6f6f6;
-    margin-bottom: 20px;
-    font-family: 'Ubuntu', 'sans-serif';
-}
-
-.max-width{
+/* Utilitário de largura máxima */
+.max-width {
     max-width: 1300px;
     padding: 0 10px;
     margin: auto;
 }
 
-.navbar .logo a{
-    color: #547ec7;
-    font-size: 35px;
-    font-weight: 500;
-}
-
-.navbar{
+/* Navbar */
+.navbar {
     position: fixed;
     width: 100%;
     z-index: 999;
     padding: 20px 0;
-    font-family: 'Ubuntu', sans-serif;
     background-color: #121721;
     border-bottom: solid #1b202a 1px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.navbar .max-width{
+.navbar .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar .menu li{
+.navbar .logo a {
+    color: #547ec7;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.navbar .menu li {
     list-style: none;
     display: inline-block;
 }
 
-.navbar .menu li a{
+.navbar .menu li a {
     display: block;
     color: #fff;
     font-size: 18px;
@@ -58,24 +57,22 @@ body{
     margin-left: 25px;
 }
 
-.menu-btn{
-    color:  #fff;
+/* Botão do menu para dispositivos móveis */
+.menu-btn {
+    color: #fff;
     font-size: 23px;
     cursor: pointer;
     display: none;
 }
 
-@media (max-width: 947px){
-    .menu-btn{
+/* Estilos responsivos para a navbar */
+@media (max-width: 947px) {
+    .menu-btn {
         display: block;
         z-index: 999;
     }
 
-    .menu-btn i.active:before{
-        content: "\f00d";
-    }
-
-    .navbar .menu{
+    .navbar .menu {
         background-color: #121721;
         position: fixed;
         height: 100vh;
@@ -87,25 +84,26 @@ body{
         transition: all 0.3s ease;
     }
 
-    .navbar .menu.active{
+    .navbar .menu.active {
         left: 0;
     }
 
-    .navbar .menu li{
+    .navbar .menu li {
         display: block;
     }
 
-    .navbar .menu li a{
+    .navbar .menu li a {
         display: inline-block;
         margin: 13px 0;
         font-size: 25px;
     }
 
-    .max-width{
+    .max-width {
         max-width: 930px;
     }
 }
 
+/* Banner principal */
 .top {
     color: #fff;
     display: flex;
@@ -119,23 +117,27 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
-.top .max-width{
+.top .max-width {
     width: 100%;
     display: flex;
 }
-.top .top-content .text-1{
+
+.top .top-content .text-1 {
     font-size: 25px;
 }
-.top .top-content .text-2{
+
+.top .top-content .text-2 {
     font-size: 55px;
     font-weight: 400;
     margin-left: -3px;
 }
-.top .top-content .text-3{
+
+.top .top-content .text-3 {
     font-size: 32px;
     margin: 5px 0;
 }
-.top .top-content a{
+
+.top .top-content a {
     display: inline-block;
     background: blue;
     color: #fff;
@@ -147,14 +149,25 @@ body{
     border: 2px solid blue;
     transition: all 0.3s ease;
 }
-.top .top-content a:hover{
+
+.top .top-content a:hover {
     color: blue;
     background: none;
 }
-.services{
+
+/* Seção de serviços */
+.services {
     color: #ffff;
     background-color: #0c0f16;
-    font-family: 'Poppins','sans-serif' ;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.services .title {
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 400;
+    font-size: 35px;
+    color: #547ec7;
 }
 
 .services .serv-content {
@@ -162,24 +175,12 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 100px 0;
-    color: #ffff;
     flex-wrap: wrap;
-
-
+    color: #ffff;
 }
 
-.services .title{
-    text-align: center;
-   margin: 40px 0;
-    font-weight: 400;
-    font-size: 35px;
-    color: #547ec7;
-
-}
-
-.services .serv-content .card{
+.services .serv-content .card {
     flex-basis: calc(33% - 20px);
-     
     background-color: #121721;
     padding: 15px;
     border-radius: 6px;
@@ -187,9 +188,10 @@ body{
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-bottom: 20px;
 }
 
-.services .serv-content .card:hover{
+.services .serv-content .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     background-color: #1b202a;
@@ -202,40 +204,197 @@ body{
     transition: all 0.3s ease;
 }
 
-.services .serv-content .card i:hover{
+.services .serv-content .card i:hover {
     color: #198289;
 }
 
-
-.services .serv-content .card :hover i{
+.services .serv-content .card:hover i {
     color: #ffff;
 }
 
-.services .serv-content .card .box {
-    transition: all 0.3s ease;
-}
-
-.services .serv-content .card:hover .box {
-    transition: all 0.3s ease;
-    transform: scale(1.05);
-
-}
-
-.services .serv-content.card.box .text {
+.services .serv-content .card .text {
     font-size: 25px;
-    font-wei
+    font-weight: 600;
     color: #ffffff;
-    transform: translateY(-10px);
-    opacity: 1;
     margin: 10px 0 7px 0;
 }
 
-
-.services .serv-content .card p{
+.services .serv-content .card p {
     font-size: 15px;
     color: #ffffff80;
 }
 
+/* Estilos responsivos para serviços */
+@media (max-width: 947px) {
+    .services .serv-content .card {
+        width: calc(50% - 10px);
+        align-items: center;
+    }
+}
 
+/* Estilos para telas menores que 690px */
+@media (max-width: 690px) {
+    .services .serv-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .serv-content .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.premium {
+    color: #ffff;
+    background-color: #0c0f16;
+    font-family: 'Poppins', 'sans-serif'; 
+    
+
+    background-position: center;
+}
+
+.premium .title {
+    text-align: center;
+    margin: 40px;
+    font-weight: 400;
+    font-size: 35px;
+    color: #547ec7;
+}
+
+
+.premium .premium-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* para deixa escrita abaixo*/
+}
+
+.premium .premium-content .left {
+    width: 45%;
+}
+
+.premium .premium-content .left img{
+    width: 400px;
+height: 400px;
+object-fit: cover;
+border-radius: 6px;
+}
+
+.premium .premium-content .right {
+    width: 55%;
+}
+
+.premium .premium-content .right .text {
+    font-size: 25px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.premium .premium-content .right p {
+    font-size: 15px;
+    color: #ffffff80;
+}
+.premium .premium-content .right a{
+    display: inline-block;
+    background: blue;
+    color: #fff;
+    font-size: 20px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 300;
+    border-radius: 6px;
+    border: 2px solid blue;
+    transition: all 0.3s ease;
+
+}
+
+.premium .premium-content .right a:hover {
+    color: #ffffff;
+    background: none;
+}
+
+
+/* Estilos responsivos para premium */
+
+@media (max-width: 690px) {
+   .premium .premium-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   .premium .premium-content .left img,
+   .premium .premium-content .right img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 947px) {
+   .premium .premium-content .left,
+   .premium .premium-content .right {
+        width: 100%;
+    }
+}
+@media (max-width: 1104px) {
+    .premium .premium-content .left img,
+    .premium .premium-content .right img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.faq {
+    background-color: #141a2a;
+    color: #fff;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .faq .title {
+    font-size: 28px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+  }
+  
+  .faq .description,
+  .faq .cta-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .faq .btn.fale-conosco {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .faq .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  
+
+
+
+footer{
+    background: #0c0f16;
+    padding: 25px 23px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+footer span a{
+    color: #547ec7;
+}
+footer span a:hover{
+    color: #fff;
+}
 
 
